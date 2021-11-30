@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Tarefas</h1>
+            <hr>
+        </header>
+        <section>
+            <div class="name box-align">
+                <input type="text" name="" id="nome">
+            </div>
+        </section>
+        <footer>
+            <button class="btn1">Inserir Tarefa</button>
+            <div class="result">
+
+            </div>
+        </footer>
+    </div>
+    <script>
+        const btn = document.querySelector('.btn1');
+        const div = document.querySelector('.result');
+        
+        let tasks = [];
+        
+        btn.addEventListener('click', addTask);
+        
+        function addTask() {
+            const input_name = document.getElementById('nome').value
+            if (input_name !== '') {
+                tasks.push(input_name)
+                result()
+            } else {
+                console.log('erro')
+            }
+        }
+        
+        function result() {
+            document.getElementById('nome').value = ''
+            tasks.forEach(function (valor) {
+                const p = document.createElement('span');
+                const b = document.createElement('button');
+                div.appendChild(p);
+                div.appendChild(b);
+                b.textContent = ('Remover')
+                p.textContent = (valor)
+                tasks = []
+                b.onclick = function () {
+                    div.removeChild(b)
+                    div.removeChild(p)
+                };
+            })
+        }
+    </script>
+</body>
+
+</html>
