@@ -1,4 +1,4 @@
-const btn = document.querySelector('.btn1');
+const btn = document.querySelector('.btn-add');
 const div = document.querySelector('.result');
 
 let tasks = [];
