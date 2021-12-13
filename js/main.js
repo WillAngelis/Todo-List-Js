@@ -1,5 +1,5 @@
-const btn = document.querySelector(".btn-add");
-const div = document.querySelector(".result");
+const btnAdd = document.querySelector(".section__btn");
+const list = document.querySelector(".list");
 
 let tasks = [];
 
@@ -14,7 +14,7 @@ input.addEventListener("keypress", function(e) {
   })
 
   //Evento de botão para adicionar task 
-  btn.addEventListener("click", addTask);
+  btnAdd.addEventListener("click", addTask);
 
 function addTask() {
   const input_name = document.getElementById("nome").value;
@@ -25,17 +25,17 @@ function addTask() {
 
 function result() {
   document.getElementById("nome").value = "";
-  tasks.forEach(function (valor) {
-    const p = document.createElement("span");
-    const b = document.createElement("button");
-    div.appendChild(p);
-    div.appendChild(b);
-    b.textContent = "Excluir";
-    p.textContent = valor;
+  tasks.forEach(function (task) {
+    const taskContent = document.createElement("span");
+    const removeBtn = document.createElement("button");
+    list.appendChild(taskContent);
+    list.appendChild(removeBtn);
+    removeBtn.textContent = "Excluir";
+    taskContent.textContent = task;
     tasks = [];
-    b.onclick = function () {
-      div.removeChild(b);
-      div.removeChild(p);
+    removeBtn.onclick = function () {
+      list.removeChild(removeBtn);
+      list.removeChild(taskContent);
     };
   });
 }
