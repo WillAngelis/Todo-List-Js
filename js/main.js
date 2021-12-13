@@ -3,17 +3,25 @@ const div = document.querySelector(".result");
 
 let tasks = [];
 
-btn.addEventListener("click", addTask);
+
+//Evento para adicionar task no clique da tecla enter
+let input = document.getElementById("nome")
+input.addEventListener("keypress", function(e) {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    addTask()
+  }
+  })
+
+  //Evento de botão para adicionar task 
+  btn.addEventListener("click", addTask);
 
 function addTask() {
   const input_name = document.getElementById("nome").value;
   if (input_name !== "") {
     tasks.push(input_name);
     result();
-  } else {
-    console.log("erro");
-  }
-}
+  }}
 
 function result() {
   document.getElementById("nome").value = "";
