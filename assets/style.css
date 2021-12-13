@@ -23,10 +23,15 @@
   background: linear-gradient(335deg, #7e39ec, #618bff);
   height: 1px;
   border: none;
+  margin-bottom: 20px;
 }
-
+.section {
+  width: 40em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .section__input {
-  margin-top: 20px;
   width: 30em;
   height: 2.5rem;
   border-radius: 3px;
@@ -40,20 +45,14 @@
 }
 .section__btn {
   width: 12em;
-  padding: 10px;
+  height: 2.5rem;
   background: linear-gradient(135deg, #7e39ec, #618bff);
   border: none;
   border-radius: 5px;
   color: #fff;
-  /* justify-self: right; */
   cursor: pointer;
   font-weight: 600;
   transition: 400ms all;
-}
-.section {
-  width: 40em;
-  display: flex;
-  justify-content: space-between;
 }
 .list {
   height: 100px;
