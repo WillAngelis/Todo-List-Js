@@ -1,96 +1,102 @@
+$background-color : linear-gradient(135deg, #1f1f1f, #1b1919)
+$header-gradient : linear-gradient(335deg, #7e39ec, #618bff)
+$white : rgb(255,255,255)
+$btnHover: rgb(231, 9, 46)
+$tam : 40em
 .container
-    align-items: center
-    background: linear-gradient(135deg, #1f1f1f, #1b1919)
+    background: $background-color
     display: flex
     flex-direction: column
-    height: 100vh
+    align-items: center
     justify-content: center
+    height: 100vh
     width: 100vw
 
 .header 
     &__title
-        background: linear-gradient(335deg, #7e39ec, #618bff)
+        background: $header-gradient
+        background-clip: text
         -webkit-text-fill-color: transparent
         -webkit-background-clip: text
-        background-clip: text
         font-size: 3rem
         font-weight: 200
 
     &__hr
-        background: linear-gradient(335deg, #7e39ec, #618bff)
+        background: $header-gradient
         border: none
         height: 1px
         margin: 0.5rem 0 1rem 0
 
 .section
-    align-items: center
     display: flex
+    align-items: center
     justify-content: space-between
-    width: 40em
+    width: $tam
 
     &__input 
-        background: rgb(252, 252, 252)
+        background: $white
+        font-weight: 600
+        text-align: left
+        color: rgb(7, 7, 7)
+        outline: none
         border: none
         border-radius: 3px
-        box-sizing: border-box
-        color: rgb(7, 7, 7)
-        font-weight: 600
         height: 2.5rem
-        outline: none
+        width: $tam
         padding: 10px
-        text-align: left
-        width: 30em
+        box-sizing: border-box
 
     &__btn 
-        background: linear-gradient(135deg, #7e39ec, #618bff)
+        background: $header-gradient 
         border: none
         border-radius: 5px
-        color: #fff
-        cursor: pointer
         font-weight: 600
+        color: $white
+        cursor: pointer
         height: 2.5rem
-        transition: 400ms all
         width: 12em
+        margin-left: 10px
+        transition: 400ms all
 
         &:active
-            background: linear-gradient(335deg, #7e39ec, #618bff)
+            background: $header-gradient 
 
 .list
-    align-items: flex-start
-    align-content: flex-start
-    border-radius: 5px
     display: flex
     flex-wrap: wrap
-    height: 40rem
+    align-items: flex-start
+    align-content: flex-start
     justify-content: space-around
+    border-radius: 5px
+    width: $tam
+    height: $tam
     margin-top: 1.5rem
-    width: 40em
 
 
     span
         background: none
+        box-sizing: border-box
         border-bottom: 1px solid #464646
-        color: #fff
         font-size: 1rem
         font-weight: 200
-        margin-bottom: 30px
-        padding: 10px
+        color: $white
         width: 30em
+        padding: 10px
+        margin-bottom: 30px
 
     button
         align-self: center
         background: none
-        border: 1px solid rgb(255, 255, 255)
+        border: 1px solid $white
         border-radius: 5px
-        color: rgb(255, 255, 255)
         font-weight: 700
-        margin-bottom: 30px
-        padding: 10px
+        color: $white
         width: 10em
+        padding: 10px
+        margin-bottom: 30px
 
         &:hover
-            background: none
+            background: $btnHover
             border: none
-            color: rgb(255, 255, 255)
-            background: rgb(231, 9, 46)
+            color: $white
             cursor: pointer
