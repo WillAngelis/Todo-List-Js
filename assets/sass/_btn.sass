@@ -1,7 +1,7 @@
 button
+    @include bg(none)
     @extend %color-white
     align-self: center
-    background: none
     border: 1px solid $white
     border-radius: 5px
     font-weight: 700
@@ -12,5 +12,5 @@ button
     &:hover
         @extend %border-none
         @extend %color-white
-        background: $btnHover
+        @include bg($btnHover)
         cursor: pointer
