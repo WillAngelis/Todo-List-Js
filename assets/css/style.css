@@ -80,7 +80,10 @@
 
 .list button:hover {
     background: none;
-    border: 1px solid rgb(186, 13, 85);
+    border: none;
+    color: rgb(255, 255, 255);
+    background: rgb(186, 13, 85);
+    cursor: pointer;
 }
 
 .list span {
@@ -97,10 +100,9 @@
 .list button {
     align-self: center;
     background: none;
-    border: none;
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 5px;
-    color: rgb(233, 14, 105);
-    cursor: pointer;
+    color: rgb(255, 255, 255);
     font-weight: 700;
     margin-bottom: 30px;
     padding: 10px;
