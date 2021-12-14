@@ -19,6 +19,7 @@
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
+    font-size: 3rem;
     font-weight: 200;
 }
 
@@ -26,7 +27,7 @@
     background: linear-gradient(335deg, #7e39ec, #618bff);
     border: none;
     height: 1px;
-    margin-bottom: 20px;
+    margin: 0.5rem 0 1rem 0;
 }
 
 .section {
