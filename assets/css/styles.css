@@ -30,6 +30,9 @@
   padding: 10px;
   box-sizing: border-box;
 }
+.section__input::selection {
+  background-color: #774CF0;
+}
 .section__btn {
   background: linear-gradient(335deg, #7e39ec, #618bff);
   width: 12em;
@@ -59,13 +62,17 @@
   box-sizing: border-box;
   border-bottom: 1px solid #464646;
   font-size: 1rem;
-  font-weight: 200;
+  font-weight: 600;
   width: 30em;
   padding: 10px;
   margin-bottom: 30px;
 }
+.list span::selection {
+  background-color: #774CF0;
+}
 .list button {
-  background: none;
+  background: #e7092e;
+  cursor: pointer;
   align-self: center;
   border: 1px solid white;
   border-radius: 5px;
@@ -74,9 +81,8 @@
   padding: 10px;
   margin-bottom: 30px;
 }
-.list button:hover {
-  background: #e7092e;
-  cursor: pointer;
+.list button:active {
+  background: #bd0826;
 }
 
 .container {
@@ -86,11 +92,11 @@
   flex-direction: column;
 }
 
-.header__hr, .section__input, .section__btn, .list button:hover {
+.header__hr, .section__input, .section__btn, .list button {
   border: none;
 }
 
-.section__btn, .list span, .list button, .list button:hover {
+.section__input::selection, .section__btn, .list span, .list span::selection, .list button {
   color: white;
 }
 
