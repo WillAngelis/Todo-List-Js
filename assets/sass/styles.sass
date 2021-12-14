@@ -15,7 +15,7 @@ body
     @include tam(100vw,100vh)
 
 .container
-    @include display(flex,center,center) 
+    @include display(center) 
     flex-direction: column
 
 .header 
@@ -35,7 +35,7 @@ body
         margin: 0.5rem 0 1rem 0
 
 .section
-    @include display(flex,center,space-between )
+    @include display(space-between )
     width: $tam
 
     &__input 
@@ -65,7 +65,7 @@ body
             @extend %gradient-active 
 
 .list
-    @include display(flex,flex-start,space-around)
+    @include display(space-around,flex-start)
     @include tam($tam,$tam)
     flex-wrap: wrap
     align-content: flex-start
