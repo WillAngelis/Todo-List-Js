@@ -7,35 +7,39 @@ let tasks = [];
 //Evento para adicionar task no clique da tecla enter
 let input = document.getElementById("nome")
 input.addEventListener("keypress", function(e) {
-  if (e.key === 'Enter') {
-    e.preventDefault();
-    addTask()
-  }
-  })
+    if (e.key === 'Enter') {
+        e.preventDefault();
+        addTask()
+    }
+})
 
-  //Evento de botão para adicionar task 
-  btnAdd.addEventListener("click", addTask);
+//Evento de botão para adicionar task 
+btnAdd.addEventListener("click", addTask);
 
 function addTask() {
-  const input_name = document.getElementById("nome").value;
-  if (input_name !== "") {
-    tasks.push(input_name);
-    result();
-  }}
+    const input_name = document.getElementById("nome").value;
+    if (input_name !== "") {
+        tasks.push(input_name);
+        console.log('adicionado')
+        showTask(input_name);
+    }
+}
 
-function result() {
-  document.getElementById("nome").value = "";
-  tasks.forEach(function (task) {
+function showTask(input_name) {
+    document.getElementById("nome").value = "";
     const taskContent = document.createElement("span");
     const removeBtn = document.createElement("button");
     list.appendChild(taskContent);
     list.appendChild(removeBtn);
     removeBtn.textContent = "Excluir";
-    taskContent.textContent = task;
-    tasks = [];
-    removeBtn.onclick = function () {
-      list.removeChild(removeBtn);
-      list.removeChild(taskContent);
-    };
-  });
+    taskContent.textContent = input_name;
+    remove(removeBtn, taskContent)
+        // tasks = [];
+}
+
+function remove(removeBtn, taskContent) {
+    removeBtn.addEventListener('click', function() {
+        list.removeChild(removeBtn);
+        list.removeChild(taskContent);
+    })
 }
