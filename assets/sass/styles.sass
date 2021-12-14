@@ -7,26 +7,27 @@
     justify-content: center
     width: 100vw
 
-.header    
+.header 
     &__title
-    background: linear-gradient(335deg, #7e39ec, #618bff)
-    -webkit-text-fill-color: transparent
-    -webkit-background-clip: text
-    background-clip: text
-    font-size: 3rem
-    font-weight: 200
+        background: linear-gradient(335deg, #7e39ec, #618bff)
+        -webkit-text-fill-color: transparent
+        -webkit-background-clip: text
+        background-clip: text
+        font-size: 3rem
+        font-weight: 200
 
     &__hr
-    background: linear-gradient(335deg, #7e39ec, #618bff)
-    border: none
-    height: 1px
-    margin: 0.5rem 0 1rem 0
+        background: linear-gradient(335deg, #7e39ec, #618bff)
+        border: none
+        height: 1px
+        margin: 0.5rem 0 1rem 0
 
 .section
     align-items: center
-    display: flex;
+    display: flex
     justify-content: space-between
     width: 40em
+
     &__input 
         background: rgb(252, 252, 252)
         border: none
@@ -39,6 +40,7 @@
         padding: 10px
         text-align: left
         width: 30em
+
     &__btn 
         background: linear-gradient(135deg, #7e39ec, #618bff)
         border: none
@@ -50,7 +52,45 @@
         transition: 400ms all
         width: 12em
 
-        &:active {
+        &:active
             background: linear-gradient(335deg, #7e39ec, #618bff)
 
+.list
+    align-items: flex-start
+    align-content: flex-start
+    border-radius: 5px
+    display: flex
+    flex-wrap: wrap
+    height: 40rem
+    justify-content: space-around
+    margin-top: 1.5rem
+    width: 40em
 
+
+    span
+        background: none
+        border-bottom: 1px solid #464646
+        color: #fff
+        font-size: 1rem
+        font-weight: 200
+        margin-bottom: 30px
+        padding: 10px
+        width: 30em
+
+    button
+        align-self: center
+        background: none
+        border: 1px solid rgb(255, 255, 255)
+        border-radius: 5px
+        color: rgb(255, 255, 255)
+        font-weight: 700
+        margin-bottom: 30px
+        padding: 10px
+        width: 10em
+
+        &:hover
+            background: none
+            border: none
+            color: rgb(255, 255, 255)
+            background: rgb(231, 9, 46)
+            cursor: pointer
