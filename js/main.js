@@ -20,7 +20,6 @@ function addTask() {
     const input_name = document.getElementById("nome").value;
     if (input_name !== "") {
         tasks.push(input_name);
-        console.log('adicionado')
         showTask(input_name);
     }
 }
@@ -39,7 +38,15 @@ function showTask(input_name) {
 
 function remove(removeBtn, taskContent) {
     removeBtn.addEventListener('click', function() {
+        removeArray(taskContent)
         list.removeChild(removeBtn);
         list.removeChild(taskContent);
     })
+}
+
+function removeArray(taskContent) {
+    let index = tasks.indexOf(taskContent.textContent);
+    if (index > -1) {
+        tasks.splice(index, 1);
+    }
 }
