@@ -3,18 +3,28 @@ $header-gradient : linear-gradient(335deg, #7e39ec, #618bff)
 $white : rgb(255,255,255)
 $btnHover: rgb(231, 9, 46)
 $tam : 40em
-.container
-    background: $background-color
+
+%display-flex
     display: flex
-    flex-direction: column
     align-items: center
+%border-none
+    border: none
+%gradient
+    background: $header-gradient
+%color-white
+    color: white
+
+.container
+    @extend %display-flex
+    background: $background-color
+    flex-direction: column
     justify-content: center
     height: 100vh
     width: 100vw
 
 .header 
     &__title
-        background: $header-gradient
+        @extend %gradient
         background-clip: text
         -webkit-text-fill-color: transparent
         -webkit-background-clip: text
@@ -22,24 +32,23 @@ $tam : 40em
         font-weight: 200
 
     &__hr
-        background: $header-gradient
-        border: none
+        @extend %border-none
+        @extend %gradient
         height: 1px
         margin: 0.5rem 0 1rem 0
 
 .section
-    display: flex
-    align-items: center
+    @extend %display-flex
     justify-content: space-between
     width: $tam
 
     &__input 
+        @extend %border-none
         background: $white
         font-weight: 600
         text-align: left
         color: rgb(7, 7, 7)
         outline: none
-        border: none
         border-radius: 3px
         height: 2.5rem
         width: $tam
@@ -47,11 +56,11 @@ $tam : 40em
         box-sizing: border-box
 
     &__btn 
-        background: $header-gradient 
-        border: none
+        @extend %border-none
+        @extend %gradient 
+        @extend %color-white
         border-radius: 5px
         font-weight: 600
-        color: $white
         cursor: pointer
         height: 2.5rem
         width: 12em
@@ -59,7 +68,7 @@ $tam : 40em
         transition: 400ms all
 
         &:active
-            background: $header-gradient 
+            @extend %gradient 
 
 .list
     display: flex
@@ -74,29 +83,29 @@ $tam : 40em
 
 
     span
+        @extend %color-white
         background: none
         box-sizing: border-box
         border-bottom: 1px solid #464646
         font-size: 1rem
         font-weight: 200
-        color: $white
         width: 30em
         padding: 10px
         margin-bottom: 30px
 
     button
+        @extend %color-white
         align-self: center
         background: none
         border: 1px solid $white
         border-radius: 5px
         font-weight: 700
-        color: $white
         width: 10em
         padding: 10px
         margin-bottom: 30px
 
         &:hover
+            @extend %border-none
+            @extend %color-white
             background: $btnHover
-            border: none
-            color: $white
             cursor: pointer

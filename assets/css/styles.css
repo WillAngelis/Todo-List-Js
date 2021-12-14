@@ -1,15 +1,29 @@
+.section, .container {
+  display: flex;
+  align-items: center;
+}
+
+.list button:hover, .section__btn, .section__input, .header__hr {
+  border: none;
+}
+
+.section__btn:active, .section__btn, .header__hr, .header__title {
+  background: linear-gradient(335deg, #7e39ec, #618bff);
+}
+
+.list button:hover, .list button, .list span, .section__btn {
+  color: white;
+}
+
 .container {
   background: linear-gradient(135deg, #1f1f1f, #1b1919);
-  display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   height: 100vh;
   width: 100vw;
 }
 
 .header__title {
-  background: linear-gradient(335deg, #7e39ec, #618bff);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -17,15 +31,11 @@
   font-weight: 200;
 }
 .header__hr {
-  background: linear-gradient(335deg, #7e39ec, #618bff);
-  border: none;
   height: 1px;
   margin: 0.5rem 0 1rem 0;
 }
 
 .section {
-  display: flex;
-  align-items: center;
   justify-content: space-between;
   width: 40em;
 }
@@ -35,7 +45,6 @@
   text-align: left;
   color: #070707;
   outline: none;
-  border: none;
   border-radius: 3px;
   height: 2.5rem;
   width: 40em;
@@ -43,21 +52,14 @@
   box-sizing: border-box;
 }
 .section__btn {
-  background: linear-gradient(335deg, #7e39ec, #618bff);
-  border: none;
   border-radius: 5px;
   font-weight: 600;
-  color: white;
   cursor: pointer;
   height: 2.5rem;
   width: 12em;
   margin-left: 10px;
   transition: 400ms all;
 }
-.section__btn:active {
-  background: linear-gradient(335deg, #7e39ec, #618bff);
-}
-
 .list {
   display: flex;
   flex-wrap: wrap;
@@ -75,7 +77,6 @@
   border-bottom: 1px solid #464646;
   font-size: 1rem;
   font-weight: 200;
-  color: white;
   width: 30em;
   padding: 10px;
   margin-bottom: 30px;
@@ -86,15 +87,12 @@
   border: 1px solid white;
   border-radius: 5px;
   font-weight: 700;
-  color: white;
   width: 10em;
   padding: 10px;
   margin-bottom: 30px;
 }
 .list button:hover {
   background: #e7092e;
-  border: none;
-  color: white;
   cursor: pointer;
 }
 
