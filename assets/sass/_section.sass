@@ -1,0 +1,29 @@
+.section
+    @include display(space-between )
+    width: $tam
+
+    &__input 
+        @include tam($tam,2.5rem)
+        @include bg($white)
+        @extend %border-none
+        font-weight: 600
+        text-align: left
+        color: $color-black
+        outline: none
+        border-radius: 3px
+        padding: 10px
+        box-sizing: border-box
+
+    &__btn 
+        @extend %border-none
+        @include bg($header-gradient)
+        @extend %color-white
+        @include tam(12em,2.5rem)
+        border-radius: 5px
+        font-weight: 600
+        cursor: pointer
+        margin-left: 10px
+        transition: 400ms all
+
+        &:active
+            @include bg($header-btn) 
