@@ -1,31 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 .header__title {
-  background: linear-gradient(335deg, #7e39ec, #618bff);
+  background: linear-gradient(150deg, #394bec, #618bff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 200;
   margin-top: 40px;
+  font-family: inherit;
 }
 .header__hr {
-  background: linear-gradient(335deg, #7e39ec, #618bff);
-  height: 1px;
-  margin: 0.5rem 0 1rem 0;
+  background: linear-gradient(150deg, #394bec, #618bff);
+  height: 4px;
+  margin: 0.2rem 0 1rem 0;
 }
 
 .section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 40em;
+  width: 700px;
 }
 .section__input {
   width: 40em;
   height: 2.5rem;
   background: white;
-  font-weight: 600;
+  font-weight: 300;
+  font-size: 1.2rem;
   text-align: left;
   color: #020202;
   outline: none;
+  font-family: inherit;
   border-radius: 3px;
   padding: 10px;
   box-sizing: border-box;
@@ -34,54 +38,66 @@
   background-color: #774CF0;
 }
 .section__btn {
-  background: linear-gradient(335deg, #7e39ec, #618bff);
+  background: linear-gradient(150deg, #394bec, #618bff);
   width: 12em;
   height: 2.5rem;
   border-radius: 5px;
-  font-weight: 600;
+  font-weight: 300;
   cursor: pointer;
+  font-family: inherit;
+  font-size: 1.2rem;
   margin-left: 10px;
   transition: 400ms all;
 }
 .section__btn:active {
-  background: linear-gradient(150deg, #7e39ec, #618bff);
+  background: linear-gradient(150deg, #395aec, #618bff);
 }
 
-.list {
+.box__task {
   display: flex;
   align-items: flex-start;
-  justify-content: space-around;
-  width: 40em;
-  height: 40em;
-  flex-wrap: wrap;
-  align-content: flex-start;
+  justify-content: space-between;
   border-radius: 5px;
+  flex-wrap: wrap;
+  width: 700px;
   margin-top: 1.5rem;
 }
-.list span {
+.box__task span {
+  color: #161616;
   box-sizing: border-box;
-  border-bottom: 1px solid #464646;
-  font-size: 1rem;
-  font-weight: 600;
-  width: 30em;
+  background: #ffffff;
+  font-weight: 300;
+  max-width: 700px;
+  width: 75%;
+  height: 45px;
+  font-family: inherit;
+  box-shadow: 2px 2px 1px 2px #666666;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 20px;
   padding: 10px;
   margin-bottom: 30px;
 }
-.list span::selection {
+.box__task span::selection {
   background-color: #774CF0;
 }
-.list button {
-  background: #e7092e;
+.box__task button {
+  background: #ff1d43;
   cursor: pointer;
+  color: black;
   align-self: center;
   border: 1px solid white;
-  border-radius: 5px;
-  font-weight: 700;
-  width: 10em;
+  border-radius: 20px;
+  font-size: 1.3rem;
+  font-weight: 300;
+  box-shadow: 2px 2px 1px 2px #ec0a3048;
+  width: 20%;
   padding: 10px;
+  font-family: inherit;
   margin-bottom: 30px;
 }
-.list button:active {
+.box__task button:active {
   background: #bd0826;
 }
 
@@ -92,18 +108,20 @@
   flex-direction: column;
 }
 
-.header__hr, .section__input, .section__btn, .list button {
+.header__hr, .section__input, .section__btn, .box__task button {
   border: none;
 }
 
-.section__input::selection, .section__btn, .list span, .list span::selection, .list button {
+.section__input::selection, .section__btn, .box__task span::selection, .box__task button {
   color: white;
 }
 
 body {
-  background: linear-gradient(to left, #1f1f1f, #1b1919);
+  background: linear-gradient(to bottom, #141414, #141414);
   width: 100vw;
   height: 100vh;
+  font-family: "VT323", monospace;
+  font-size: 1.6rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
