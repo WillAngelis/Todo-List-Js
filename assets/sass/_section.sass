@@ -1,15 +1,17 @@
 .section
     @include display(space-between )
-    width: $tam
+    width: 700px
 
-    &__input 
+    &__input
         @include tam($tam,2.5rem)
         @include bg($white)
         @extend %border-none
-        font-weight: 600
+        font-weight: 300
+        font-size: 1.2rem
         text-align: left
         color: $color-black
         outline: none
+        font-family: inherit
         border-radius: 3px
         padding: 10px
         box-sizing: border-box
@@ -17,16 +19,18 @@
             background-color: $selection
             @extend %color-white
 
-    &__btn 
+    &__btn
         @extend %border-none
         @include bg($header-gradient)
         @extend %color-white
         @include tam(12em,2.5rem)
         border-radius: 5px
-        font-weight: 600
+        font-weight: 300
         cursor: pointer
+        font-family: inherit
+        font-size: 1.2rem
         margin-left: 10px
         transition: 400ms all
 
         &:active
-            @include bg($header-btn) 
+            @include bg($header-btn)
