@@ -1,6 +1,6 @@
-const btnAdd = document.querySelector(".section__btn");
-const list = document.querySelector(".list");
-const boxTask = document.createElement("div");
+const btnAdd = document.querySelector('.section__btn');
+const list = document.querySelector('.list');
+const boxTask = document.createElement('div');
 
 let tasks = [];
 
