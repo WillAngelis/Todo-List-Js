@@ -2,7 +2,7 @@ const btnAdd = document.querySelector('.section__btn');
 const list = document.querySelector('.list');
 const boxTask = document.createElement('div');
 
-let tasks = [];
+const tasks = [];
 
 //Evento para adicionar task no clique da tecla enter
 let input = document.getElementById("nome");
