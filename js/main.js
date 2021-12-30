@@ -22,18 +22,15 @@ function addTask() {
     tasks.push(input_name);
     showTask(input_name);
   }
-}
-
-function showTask(input_name) {
-  document.getElementById("nome").value = "";
-  const taskContent = document.createElement("span");
-  const removeBtn = document.createElement("button");
+  document.getElementById('nome').value = '';
+  const taskContent = document.createElement('span');
+  const removeBtn = document.createElement('button');
   list.appendChild(boxTask);
   boxTask.appendChild(taskContent);
   boxTask.appendChild(removeBtn);
-  boxTask.classList.add("box__task");
-  removeBtn.textContent = "Excluir";
-  taskContent.textContent = input_name;
+  boxTask.classList.add('box__task');
+  removeBtn.textContent = 'Excluir';
+  taskContent.textContent = inputName;
   remove(removeBtn, taskContent);
   // tasks = [];
 }
