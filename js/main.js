@@ -4,18 +4,18 @@ const boxTask = document.createElement('div');
 
 const tasks = [];
 
+function removeArray(taskContent) {
   const index = tasks.indexOf(taskContent.textContent);
+  if (index > -1) {
+    tasks.splice(index, 1);
   }
+}
+function remove(removeBtn, taskContent) {
+  removeBtn.addEventListener('click', () => {
+    removeArray(taskContent);
+    boxTask.removeChild(removeBtn);
+    boxTask.removeChild(taskContent);
 });
-
-//Evento de botão para adicionar task
-btnAdd.addEventListener("click", addTask);
-
-function addTask() {
-  const input_name = document.getElementById("nome").value;
-  if (input_name !== "") {
-    tasks.push(input_name);
-    showTask(input_name);
   }
   document.getElementById('nome').value = '';
   const taskContent = document.createElement('span');
