@@ -4,12 +4,7 @@ const boxTask = document.createElement('div');
 
 const tasks = [];
 
-//Evento para adicionar task no clique da tecla enter
-let input = document.getElementById("nome");
-input.addEventListener("keypress", function (e) {
-  if (e.key === "Enter") {
-    e.preventDefault();
-    addTask();
+  const index = tasks.indexOf(taskContent.textContent);
   }
 });
 
