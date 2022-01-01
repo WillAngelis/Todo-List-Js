@@ -15,8 +15,9 @@ function remove(removeBtn, taskContent) {
     removeArray(taskContent);
     boxTask.removeChild(removeBtn);
     boxTask.removeChild(taskContent);
-});
-  }
+  });
+}
+function showTask(inputName) {
   document.getElementById('nome').value = '';
   const taskContent = document.createElement('span');
   const removeBtn = document.createElement('button');
@@ -27,22 +28,15 @@ function remove(removeBtn, taskContent) {
   removeBtn.textContent = 'Excluir';
   taskContent.textContent = inputName;
   remove(removeBtn, taskContent);
-  // tasks = [];
 }
 
-function remove(removeBtn, taskContent) {
-  removeBtn.addEventListener("click", function () {
-    removeArray(taskContent);
-    boxTask.removeChild(removeBtn);
-    boxTask.removeChild(taskContent);
-  });
-}
-
-function removeArray(taskContent) {
-  let index = tasks.indexOf(taskContent.textContent);
-  if (index > -1) {
-    tasks.splice(index, 1);
+function addTask() {
+  const inputName = document.getElementById('nome').value;
+  if (inputName !== '') {
+    tasks.push(inputName);
+    showTask(inputName);
   }
+}
 // Evento de botão para adicionar task
 btnAdd.addEventListener('click', addTask);
 
@@ -52,5 +46,5 @@ input.addEventListener('keypress', (e) => {
   if (e.key === 'Enter') {
     e.preventDefault();
     addTask();
-}
+  }
 });
