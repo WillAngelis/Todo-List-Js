@@ -43,4 +43,14 @@ function removeArray(taskContent) {
   if (index > -1) {
     tasks.splice(index, 1);
   }
+// Evento de botão para adicionar task
+btnAdd.addEventListener('click', addTask);
+
+// Evento para adicionar task no clique da tecla enter
+const input = document.getElementById('nome');
+input.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    addTask();
 }
+});
